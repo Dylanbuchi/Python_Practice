@@ -1,7 +1,7 @@
 import os
 import datetime
 
-file_name = "file.txt"
+file_name = "files/file.txt"
 
 
 def main():

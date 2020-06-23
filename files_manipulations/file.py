@@ -1,4 +1,4 @@
-file_name = "./files_manipulations/file.txt"
+file_name = "files/file.txt"
 
 
 def write_file(file_name, line):

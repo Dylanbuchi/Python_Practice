@@ -10,7 +10,6 @@ os.rmdir("hehe")
 os.rename("a", "b")
 os.rename("b", "a")
 
-
 def get_current_path():
     # get current working path
     current_directory = os.getcwd()
@@ -25,7 +24,7 @@ print(os.listdir("a"))
 
 dir = "a"
 
-#check if there is files or fodlers
+#check if there is files or folders
 for name in os.listdir(dir):
     
     fullname = os.path.join(dir, name)
