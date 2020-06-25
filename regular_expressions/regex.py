@@ -58,13 +58,28 @@ def regex_examples():
 
 
 def practice():
-    # method to practice
+
     pattern = r"^[a-zA-Z\s]*[0-9]*$"
 
     print(search_pattern(pattern, "this is valid"))
     print(search_pattern(pattern, "this is valid 34"))
     print(search_pattern(pattern, "ThisIsValid"))
     print(search_pattern(pattern, "  ThisIsValid  "))
+
+    time = r"(1[012]|[0-9]):(0[0]|[01-59]+) ?([amAM]+|[pmPM]+)"
+    print(search_pattern(time, "12:00 AM"))
+
+    pattern = r"^[\w \. \- \+]+\.[a-zA-Z]+$"
+    print(search_pattern(pattern, "gmail.com"))
+
+    pattern = r"\([a-z A-Z]+\)|\([\w]+\)"
+    result = re.search(pattern, "hello (IG)")
+    print(result)
+
+    pattern = r"^[\w \s]+[\s]{1,}[0-9]{5}|[0-9]{5}-[0-9]{4}"
+    result = re.search(
+        pattern, "Their address is: 123 Main Street, Anytown, AZ 85258-0001.")
+    print(result)
 
 
 def main():
