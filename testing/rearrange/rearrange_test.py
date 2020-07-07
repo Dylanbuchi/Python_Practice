@@ -19,10 +19,5 @@ class TestRearrange(unittest.TestCase):
         result = "Dylan"
         self.assertEqual(rearrange_name(testcase), result)
         
-    def test_numbers_in_name(self):
-        testcase = "Dylan B678"
-        result = None
-        self.assertEqual(rearrange_name(testcase), result)
-
 
 unittest.main()
