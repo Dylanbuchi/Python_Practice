@@ -1,5 +1,5 @@
-from rearrange import rearrange_name
 import unittest
+from rearrange import rearrange_name
 
 
 class TestRearrange(unittest.TestCase):
@@ -8,5 +8,21 @@ class TestRearrange(unittest.TestCase):
         testcase = "Dylan Buchi"
         result = "Buchi Dylan"
         self.assertEqual(rearrange_name(testcase), result)
+
+    def test_empty(self):
+        testcase = ""
+        result = ""
+        self.assertEqual(rearrange_name(testcase), result)
+
+    def test_one_name(self):
+        testcase = "Dylan"
+        result = "Dylan"
+        self.assertEqual(rearrange_name(testcase), result)
         
+    def test_numbers_in_name(self):
+        testcase = "Dylan B678"
+        result = None
+        self.assertEqual(rearrange_name(testcase), result)
+
+
 unittest.main()
