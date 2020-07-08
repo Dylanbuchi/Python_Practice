@@ -1,6 +1,5 @@
+from testing.rearrange.rearrange import rearrange_name
 import unittest
-from rearrange import rearrange_name
-
 
 class TestRearrange(unittest.TestCase):
 
