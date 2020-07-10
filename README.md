@@ -4,3 +4,4 @@
 - files
 - regular expressions
 - testing
+- ds & algorithms
