@@ -1,8 +1,3 @@
-array = ['apples', 'bananas', 'tofu', 'cats']
-array_2 = [1, 2, 3, 4, 5]
-array_3 = [1, 2, 'apples', 'bananas']
-
-
 def string_from(array: list) -> str:
     # transform a List into a String
     convert = [str(i) for i in array]
@@ -13,7 +8,17 @@ def string_from(array: list) -> str:
     return result
 
 
-examples = array, array_2, array_3
+def main():
 
-for i in examples:
-    print(string_from(i))
+    array = ['apples', 'bananas', 'tofu', 'cats']
+    array_2 = [1, 2, 3, 4, 5]
+    array_3 = [1, 2, 'apples', 'bananas']
+
+    examples = array, array_2, array_3
+
+    for i in examples:
+        print(string_from(i))
+
+
+if __name__ == "__main__":
+    main()
