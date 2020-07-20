@@ -6,3 +6,4 @@
 - testing
 - ds & algorithms
 - network
+- lists
