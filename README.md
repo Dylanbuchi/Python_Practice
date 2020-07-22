@@ -7,3 +7,4 @@
 - ds & algorithms
 - network
 - lists
+- dictionary
