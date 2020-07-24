@@ -9,3 +9,4 @@
 - lists
 - dictionary
 - oop (object oriented programming)
+- strings
