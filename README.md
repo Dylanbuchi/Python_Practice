@@ -10,3 +10,4 @@
 - dictionary
 - oop (object oriented programming)
 - strings
+- scripts
