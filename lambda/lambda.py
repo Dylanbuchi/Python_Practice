@@ -1,7 +1,7 @@
 import random
 
 
-def get_line(array):
+def get_line():
     # to print a line '-----' for visual purpose only
     return "\n" + "--" * 26
 
@@ -13,7 +13,7 @@ def to_string(array):
 
 def get_result(array):
     # get the formated result
-    return to_string(array) + get_line(array)
+    return to_string(array) + get_line()
 
 
 def print_result(dic):
