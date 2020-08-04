@@ -12,3 +12,4 @@
 - strings
 - scripts
 - matrix
+- lambda
