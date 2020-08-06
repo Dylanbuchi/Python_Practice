@@ -9,7 +9,7 @@
 - lists
 - dictionary
 - oop (object oriented programming)
-- strings
+- strings (challenges questions are from https://www.w3resource.com/python-exercises/string/)
 - scripts
 - matrix
 - lambda
