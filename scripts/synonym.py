@@ -43,7 +43,7 @@ Here are the words:
 
 
 def get_user_word(text):
-    #return word from user input
+    # return word from user input
     return input(text).lower().strip()
 
 
@@ -77,7 +77,7 @@ def main():
     happy_synonyms = ['content', 'cherry', 'merry', 'jovial', 'jocular']
     sad_synonyms = ['unhappy', 'downcast', 'miserable', 'glum', 'melancholy']
 
-    # key  ->  value
+    # dict key -> value
     word_to_synonym = {
         'hot': hot_synonyms,
         'happy': cold_synonyms,
