@@ -25,7 +25,7 @@ Here are the words:
 
         if user_word in word_to_synonym:
             print(
-                f"a synonym for {user_word.title()} is {get_random_synonym(word_to_synonym, user_word)}"
+                f"a synonym for '{user_word.title()}' is '{get_random_synonym(word_to_synonym, user_word).title()}'"
             )
             break
         print("\nPlease enter a word from the list!")
@@ -50,7 +50,7 @@ def get_user_word(text):
 def print_words(word_to_synonym: dict):
     # print the keys
     for word in word_to_synonym:
-        print(f"- {word.title()}")
+        print(f"\t- {word.title()}")
 
 
 def get_random_synonym(word_to_synonym: dict, word: str):
@@ -66,7 +66,7 @@ def print_all_synonyms_from(word, word_to_synonym):
     print(f"'{word.title()}' synonyms are:")
 
     for synonym in synonyms:
-        print(f"- {synonym.title()}")
+        print(f"\t- {synonym.title()}")
 
 
 def main():
