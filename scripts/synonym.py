@@ -2,20 +2,20 @@ import random
 import sys
 
 
-def print_menu(menu, word_to_synonym):
+def print_menu(menu, word_to_synonyms):
     # print the menu user interface
     print(menu)
-    print_words(word_to_synonym)
+    print_words(word_to_synonyms)
     print()
 
 
-def user_interface(word_to_synonym):
+def user_interface(word_to_synonyms):
     # the user interface that takes a list of words to choose for getting synonyms
     menu = f"""
 Choose a word from this list and I will give you a synonym!
 Here are the words:
             """
-    print_menu(menu, word_to_synonym)
+    print_menu(menu, word_to_synonyms)
 
     text = "What word would you like a synonym for: "
     user_word = ""
@@ -23,13 +23,13 @@ Here are the words:
     while True:
         user_word = get_user_word(text)
 
-        if user_word in word_to_synonym:
+        if user_word in word_to_synonyms:
             print(
-                f"a synonym for '{user_word.title()}' is '{get_random_synonym(word_to_synonym, user_word).title()}'"
+                f"a synonym for '{user_word.title()}' is '{get_random_synonym(word_to_synonyms, user_word).title()}'"
             )
             break
         print("\nPlease enter a word from the list!")
-        print_menu(menu, word_to_synonym)
+        print_menu(menu, word_to_synonyms)
 
     print(
         f"Would you like to see the others synonym for the word '{user_word.title()}' ? (y/n)"
@@ -38,7 +38,7 @@ Here are the words:
 
     if response == 'y':
         print()
-        print_all_synonyms_from(user_word, word_to_synonym)
+        print_all_synonyms_from(user_word, word_to_synonyms)
     sys.exit()
 
 
@@ -47,22 +47,22 @@ def get_user_word(text):
     return input(text).lower().strip()
 
 
-def print_words(word_to_synonym: dict):
+def print_words(word_to_synonyms: dict):
     # print the keys
-    for word in word_to_synonym:
+    for word in word_to_synonyms:
         print(f"\t- {word.title()}")
 
 
-def get_random_synonym(word_to_synonym: dict, word: str):
+def get_random_synonym(word_to_synonyms: dict, word: str):
     # return a random synonym from the given key
-    synonyms = word_to_synonym[word]
+    synonyms = word_to_synonyms[word]
     random.shuffle(synonyms)
     return synonyms[0].title()
 
 
-def print_all_synonyms_from(word, word_to_synonym):
+def print_all_synonyms_from(word, word_to_synonyms):
     # print every synonmy from the given word
-    synonyms = word_to_synonym[word]
+    synonyms = word_to_synonyms[word]
     print(f"'{word.title()}' synonyms are:")
 
     for synonym in synonyms:
@@ -78,7 +78,7 @@ def main():
     sad_synonyms = ['unhappy', 'downcast', 'miserable', 'glum', 'melancholy']
 
     # dict key -> value
-    word_to_synonym = {
+    word_to_synonyms = {
         'hot': hot_synonyms,
         'happy': cold_synonyms,
         'cold': happy_synonyms,
@@ -86,7 +86,7 @@ def main():
     }
 
     # main app
-    user_interface(word_to_synonym)
+    user_interface(word_to_synonyms)
 
 
 if __name__ == '__main__':
