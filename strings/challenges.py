@@ -13,7 +13,10 @@ def add_question(dic, question, result):
     dic[question] = result
 
 
+#--------------------------------------------
 # results of questions in order from 1 to n
+
+
 def get_len(string):
     #1
     # get length of the a string
@@ -76,6 +79,40 @@ def add_ing_or_ly(string):
     return result
 
 
+def longest_len(string):
+    # 6
+    # Write a Python function that takes a list of words and returns the length of the longest one
+    words = string.split()
+    longest = ''
+    for word in words:
+        if len(word) > len(longest):
+            longest = word
+    return f"longest word is : '{longest}'"
+
+
+def remove_odd_index(string):
+    # 7
+    # Write a Python program to remove
+    # the characters which have odd index values of a given string
+    result = ''
+
+    for i, ch in enumerate(string):
+        if i % 2 == 0:
+            result += ch
+    return result
+
+
+def add_tags(tag: str, string: str):
+    # 8
+    #Write a Python function to create the HTML string with tags around the word(s):
+    open_tag = f"<{tag}>"
+    close_tag = f"</{tag}>"
+
+    result = ''.join([open_tag, string, close_tag])
+
+    return result
+
+
 def main():
     #key     ->    value
     question_to_response = {}
@@ -83,7 +120,7 @@ def main():
     #1
     add_question(
         question_to_response,
-        "\n#1 Write a Python program to calculate the length of a string:\n",
+        "\n#1 Write a Pythonprogram to calculate the length of a string:\n",
         get_len(DEFAULT_STRING))
     #2
     add_question(
@@ -105,6 +142,21 @@ def main():
         question_to_response,
         "\n#5 Write a Python program to add 'ing' at the end of a given string (length should be at least 3). If the given string already ends with 'ing' then add 'ly' instead. If the string length of the given string is less than 3, leave it unchanged:\n",
         add_ing_or_ly(DEFAULT_STRING))
+    #6
+    add_question(
+        question_to_response,
+        "\n #6 Write a Python function that takes a list of words and returns the length of the longest one:\n",
+        longest_len(DEFAULT_STRING))
+    #7
+    add_question(
+        question_to_response,
+        "\n #7 Write a Python program to remove the characters which have odd index values of a given string:\n",
+        remove_odd_index(DEFAULT_STRING))
+    #8
+    add_question(
+        question_to_response,
+        "\n #8 Write a Python function to create the HTML string with tags around the word(s):\n",
+        add_tags('p', DEFAULT_STRING))
 
     print_questions_and_results(question_to_response)
 
