@@ -8,3 +8,10 @@ class Dog:
 
     def get_age(self):
         return self.age
+
+
+if __name__ == "__main__":
+
+    doggy = Dog("Dog", 2)
+    print(doggy.get_name())
+    print(doggy.get_age())

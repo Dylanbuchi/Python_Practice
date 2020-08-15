@@ -36,7 +36,7 @@ def user_interface():
         response = input("press '1' to change your password or '0' to exit: ")
 
         if response == '0':
-            sys.exit()
+            sys. ()
         elif response == '1':
             change_password()
 
