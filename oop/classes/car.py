@@ -12,7 +12,7 @@ class Car:
         self._year = year
         self._price = price
 
-# ------- getetrs and setters -------
+# ------- getters and setters -------
 
     @property
     def make(self):
