@@ -1,4 +1,4 @@
-class Cat:
+class Cat():
 
     species = 'mammal'
 
