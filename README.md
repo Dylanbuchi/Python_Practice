@@ -5,6 +5,7 @@
 - ds & algorithms
 - files manipulations
 - functional programming
+- generators
 - i/o streams
 - matrix
 - network
