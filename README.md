@@ -1,6 +1,7 @@
 # Python Practice
 
 - decorators
+- error handling
 - ds & algorithms
 - files manipulations
 - functional programming
