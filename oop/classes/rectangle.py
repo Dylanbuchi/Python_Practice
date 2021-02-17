@@ -28,7 +28,7 @@ class Rectangle:
         self._height = height
 
     def __str__(self):
-        return f"Rectange: width: {self.width} height: {self.height}"
+        return f"Rectangle: width: {self.width} height: {self.height}"
 
     def __repr__(self):
         return f"Rectangle({self.width}, {self.height})"
