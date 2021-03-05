@@ -21,7 +21,7 @@ if __name__ == "__main__":
     user1 = {
         'name': 'Homer',
         'valid': True
-        #changing this will either
-        #run or not run the message_friends function.
+        # changing this will either
+        # run or not run the message_friends function.
     }
     message_friends(user1)
