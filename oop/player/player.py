@@ -8,7 +8,7 @@ class Player:
         self.score = 0
         self.winner = False
 
-    def print_scores(self) -> None:
+    def print_score(self) -> None:
         print(self, f"Score: {self.score}")
 
     def __repr__(self) -> str:
